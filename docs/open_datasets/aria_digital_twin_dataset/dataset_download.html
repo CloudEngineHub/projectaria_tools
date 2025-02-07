@@ -15,8 +15,8 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous"><link rel="stylesheet" href="/projectaria_tools/assets/css/styles.be419bb6.css">
-<script src="/projectaria_tools/assets/js/runtime~main.598c1371.js" defer="defer"></script>
-<script src="/projectaria_tools/assets/js/main.56f419f9.js" defer="defer"></script>
+<script src="/projectaria_tools/assets/js/runtime~main.c4a0cfa9.js" defer="defer"></script>
+<script src="/projectaria_tools/assets/js/main.98ce5405.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard" data-theme="light">
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script>
@@ -52,8 +52,11 @@ Here you can subselect sequences according to some filter options, or get the li
 For more information on the content in the other sequences, see the Data Content section below</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="download-the-aria-digital-twin-adt-benchmark-dataset">Download the Aria Digital Twin (ADT) benchmark dataset<a href="#download-the-aria-digital-twin-adt-benchmark-dataset" class="hash-link" aria-label="Direct link to Download the Aria Digital Twin (ADT) benchmark dataset" title="Direct link to Download the Aria Digital Twin (ADT) benchmark dataset">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-size">Data size<a href="#data-size" class="hash-link" aria-label="Direct link to Data size" title="Direct link to Data size">​</a></h3>
-<p>The Aria Digital Twin dataset consists of 236 sequences. It is split into 4 data types that can be downloaded individually, plus MPS data. Go to <a href="/projectaria_tools/docs/ARK/mps">Project Aria Machine Perception Services</a> for more information about MPS data. The MPS data is also broken into chunks that can be included or excluded at download time. The size of each data type is shown below. ADT data without MPS is approximately 3.5TB.</p>
-<table><thead><tr><th><strong>Data type</strong></th><th>What&#x27;s included</th><th>Per sequence size</th><th>Total size for all sequences</th></tr></thead><tbody><tr><td>main</td><td>Aria raw data, 2D bounding box, 3D object poses and bounding box, skeleton data, eye gaze data</td><td>3 - 6 GB</td><td>~700 GB</td></tr><tr><td>segmentation</td><td>Instance segmentation data</td><td>2 - 4 GB</td><td>~750 GB</td></tr><tr><td>depth</td><td>Depth map data</td><td>4 - 8 GB</td><td>~1.5 TB</td></tr><tr><td>synthetic</td><td>Synthetic rendering data</td><td>2 - 4 GB</td><td>500 GB</td></tr><tr><td>MPS eyegaze</td><td>Eyegaze, summary file</td><td>&lt; 1 MB</td><td>~31 MB</td></tr><tr><td>MPS SLAM points</td><td>Semi-dense points and observations</td><td>200 - 500 MB</td><td>~31 GB</td></tr><tr><td>MPS SLAM trajectories</td><td>Open and closed loop trajectories</td><td>100 - 200 MB</td><td>12 GB</td></tr><tr><td>MPS SLAM online calibration</td><td>Online calibrations</td><td>&lt; 20 MB</td><td>1.2 GB</td></tr></tbody></table>
+<p>The Aria Digital Twin dataset consists of 236 sequences.
+It is split into 4 data types that can be downloaded individually, plus MPS data.
+Go to <a href="/projectaria_tools/docs/ARK/mps">Project Aria Machine Perception Services</a> for more information about MPS data.
+The MPS data is also broken into chunks that can be included or excluded at download time.
+ADT data without MPS is approximately 3.5TB.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="download-via-cli">Download via CLI<a href="#download-via-cli" class="hash-link" aria-label="Direct link to Download via CLI" title="Direct link to Download via CLI">​</a></h3>
 <p>ADT uses the general Aria dataset downloader, which is available in the <a href="/projectaria_tools/docs/data_utilities/installation/installation_python"><code>projectaria_tools</code> PyPI (pip install) package</a>.</p>
 <p>To use the downloader, use the following commands in the virtual environment where you&#x27;ve installed <code>projectaria_tools</code>:</p>
