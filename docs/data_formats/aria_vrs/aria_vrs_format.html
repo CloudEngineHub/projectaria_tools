@@ -15,8 +15,8 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous"><link rel="stylesheet" href="/projectaria_tools/assets/css/styles.be419bb6.css">
-<script src="/projectaria_tools/assets/js/runtime~main.152fa8fc.js" defer="defer"></script>
-<script src="/projectaria_tools/assets/js/main.73abe2b0.js" defer="defer"></script>
+<script src="/projectaria_tools/assets/js/runtime~main.84b3bacc.js" defer="defer"></script>
+<script src="/projectaria_tools/assets/js/main.e26e1592.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard" data-theme="light">
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script>
@@ -25,7 +25,7 @@
 <p>Project Aria data is stored in <a href="https://facebookresearch.github.io/vrs/" target="_blank" rel="noopener noreferrer">VRS</a>, which is optimized to record and playback streams of multi-modal sensor data, such as images, audio, and other discrete sensors (IMU, temperature, etc.). Data is stored in per-device streams of time-stamped records.</p>
 <p>The most intuitive way to access Aria data is via our loaders and visualizers. Go to <a href="/projectaria_tools/docs/data_utilities">Data Utilities</a> for Python and C++ interfaces to easily access VRS data. You may also want to use <a href="https://facebookresearch.github.io/vrs/" target="_blank" rel="noopener noreferrer">vrstools</a> to extract or inspect VRS data.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="aria-data-streams">Aria data streams<a href="#aria-data-streams" class="hash-link" aria-label="Direct link to Aria data streams" title="Direct link to Aria data streams">​</a></h2>
-<p>In VRS, data is organized by streams. Each stream stores the data measured by a specific sensor, except for Eye Tracking (both camers share a single data stream) and microphones (up to 7 microphones share a single stream).</p>
+<p>In VRS, data is organized by streams. Each stream stores the data measured by a specific sensor, except for Eye Tracking (both cameras share a single data stream) and microphones (up to 7 microphones share a single stream).</p>
 <p>The streams are identified by their stream ID. Each stream ID is composed of two parts, a recordable type ID to categorize the type of the sensor and a stream ID for identify the specific sensor instance. E.g. the first SLAM (aka Mono Scene) camera is identified as 1201-1 where 1201 is the numerical ID for SLAM camera data type, and 1 identifies the cameras as the first instance.</p>
 <p>Streams can also be identified by a short label. Labels are used to identify sensors in calibration.</p>
 <p>The following table lists the Stream ID and Recordable Type ID, as well as their label. GPS, Wi-Fi and Bluetooth have labels, but are not calibrated. If you use projectaria tools loaders, you do not have to memorize this mapping as there is an API that converts between Stream ID and labels.</p>
