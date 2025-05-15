@@ -15,8 +15,8 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous"><link rel="stylesheet" href="/projectaria_tools/assets/css/styles.be419bb6.css">
-<script src="/projectaria_tools/assets/js/runtime~main.203ec6c4.js" defer="defer"></script>
-<script src="/projectaria_tools/assets/js/main.1458b86b.js" defer="defer"></script>
+<script src="/projectaria_tools/assets/js/runtime~main.b789e19f.js" defer="defer"></script>
+<script src="/projectaria_tools/assets/js/main.c65d0f75.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard" data-theme="light">
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script>
@@ -27,7 +27,7 @@
 <p>We are pleased to announce the release of Aria Research Kit v1.14 which now makes fully articulated 21 landmark hand joint positions available with Machine Perception Services Hand Tracking output as a new CSV file called hand_tracking_results.csv. Researchers can utilize this long-awaited feature to produce detailed 3D hand pose annotations useful for robotics research, contextual AI, and anywhere else that hand signals may be important.</p>
 <p><img decoding="async" loading="lazy" alt="Hand tracking demonstration" src="/projectaria_tools/assets/images/21-keypoint-tri-8b0ff3b801a5b3164bdb9c298e1bb408.png" width="600" height="238" class="img_ev3q"></p>
 <p>In addition to 21 landmarks output, we output a six-degree-of-freedom transform at the wrist location to allow for transformation of the landmarks from the hand frame to the device frame, and normal vectors computed at both the wrist and palm landmarks. The transform and normals form a consistent system and the normals also match the normals we’ve computed on previous versions of wrist and palm output.</p>
-<p><img decoding="async" loading="lazy" alt="The 21 keypoints" src="/projectaria_tools/assets/images/21-keypoints-36dacdda7266325ce379b7e90c5a31b7.png" width="478" height="425" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="The 21 landmarks" src="/projectaria_tools/assets/images/21-keypoints-36dacdda7266325ce379b7e90c5a31b7.png" width="478" height="425" class="img_ev3q"></p>
 <p>We encourage hand tracking users to transition to this new output format, where we will be investing in any future maintenance and bug fixing. We will also continue to provide wrist_and_palm_poses output, which can be loaded with prior versions of projectaria_tools, but will not invest in bug fixes or feature additions for this legacy format.</p>
 <ul>
 <li>
@@ -42,9 +42,9 @@
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="aria-companion-app">Aria Companion App<a href="#aria-companion-app" class="hash-link" aria-label="Direct link to Aria Companion App" title="Direct link to Aria Companion App">​</a></h4>
 <p>Aria Mobile Companion App App v215 is now available for installation. Visit to the <a href="/projectaria_tools/docs/ARK/ark_downloads">ARK SW Downloads and Updates</a> to download the latest version for Android. For iOS, select Update in the TestFlight app.</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="project-aria-tools">Project Aria Tools<a href="#project-aria-tools" class="hash-link" aria-label="Direct link to Project Aria Tools" title="Direct link to Project Aria Tools">​</a></h4>
-<p>The latest projectaria-tools 1.6.0 contains tooling necessary to load and visualize 21 keypoint hand tracking output. See <a href="/projectaria_tools/docs/data_utilities">documentation</a> for download instructions.</p>
+<p>The latest projectaria-tools 1.6.0 contains tooling necessary to load and visualize 21 landmark hand tracking output. See <a href="/projectaria_tools/docs/data_utilities">documentation</a> for download instructions.</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="aria-studio-v110">Aria Studio v1.1.0<a href="#aria-studio-v110" class="hash-link" aria-label="Direct link to Aria Studio v1.1.0" title="Direct link to Aria Studio v1.1.0">​</a></h4>
-<p>The latest version of Aria Studi, v1.1.0 is required to submit requests to the MPS service for hand tracking annotations with 21 keypoint output. See <a href="/projectaria_tools/docs/ARK/aria_studio">documentation</a> for instructions on how to install Aria Studio. Note that starting with this version, we no longer support Mac Intel with a one-click installer and Mac Intel users must use pip for Aria Studio installation.</p>
+<p>The latest version of Aria Studi, v1.1.0 is required to submit requests to the MPS service for hand tracking annotations with 21 landmark output. See <a href="/projectaria_tools/docs/ARK/aria_studio">documentation</a> for instructions on how to install Aria Studio. Note that starting with this version, we no longer support Mac Intel with a one-click installer and Mac Intel users must use pip for Aria Studio installation.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="questions-comments-concerns">Questions, comments, concerns?<a href="#questions-comments-concerns" class="hash-link" aria-label="Direct link to Questions, comments, concerns?" title="Direct link to Questions, comments, concerns?">​</a></h3>
 <p>If you encounter any bugs or issues, please contact our support team through one of the following channels:</p>
 <ul>
@@ -248,8 +248,8 @@
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="whats-new">What’s New?<a href="#whats-new" class="hash-link" aria-label="Direct link to What’s New?" title="Direct link to What’s New?">​</a></h4>
 <ol>
 <li>We’ve tuned our hand tracking algorithm to improve recall for common computer vision research use cases.</li>
-<li>We are including normal vectors to the wrist and palm keypoint output so that you can better understand the orientation of hands in your sequences (<a href="https://facebookresearch.github.io/projectaria_tools/docs/data_formats/mps/hand_tracking" target="_blank" rel="noopener noreferrer">see documentation</a> and <a href="https://github.com/facebookresearch/projectaria_tools/blob/main/core/examples/mps_quickstart_tutorial.ipynb" target="_blank" rel="noopener noreferrer">a notebook to visualize sample data</a>)</li>
-<li>We provide a demonstration of how to project popular third-party hand tracking models onto our wrist and palm keypoint output for tasks that require higher-fidelity hand tracking output (<a href="https://github.com/facebookresearch/projectaria_tools/tree/main/tools/samples/python/mps_handtracking_overlay_media_pipe" target="_blank" rel="noopener noreferrer">see Jupyter notebook</a>).</li>
+<li>We are including normal vectors to the wrist and palm landmark output so that you can better understand the orientation of hands in your sequences (<a href="https://facebookresearch.github.io/projectaria_tools/docs/data_formats/mps/hand_tracking" target="_blank" rel="noopener noreferrer">see documentation</a> and <a href="https://github.com/facebookresearch/projectaria_tools/blob/main/core/examples/mps_quickstart_tutorial.ipynb" target="_blank" rel="noopener noreferrer">a notebook to visualize sample data</a>)</li>
+<li>We provide a demonstration of how to project popular third-party hand tracking models onto our wrist and palm landmark output for tasks that require higher-fidelity hand tracking output (<a href="https://github.com/facebookresearch/projectaria_tools/tree/main/tools/samples/python/mps_handtracking_overlay_media_pipe" target="_blank" rel="noopener noreferrer">see Jupyter notebook</a>).</li>
 </ol>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="what-do-i-need-to-update-to-access-it">What Do I Need to Update to Access It?<a href="#what-do-i-need-to-update-to-access-it" class="hash-link" aria-label="Direct link to What Do I Need to Update to Access It?" title="Direct link to What Do I Need to Update to Access It?">​</a></h4>
 <ol>
